@@ -3,17 +3,33 @@
 <title>Altersverteilung der positiv Getesteten im Kanton Zürich</title>
 <link rel="stylesheet" type="text/css" href="./inspector.css">
 <body>
+    <div class="wrapper">
+    <div id="ageCatPer"></div>
+    <div id="viewofAreaChartAge"></div>
+    <div id="viewoflegendeChart"></div>
+    </div>
 <script type="module">
 
-import define from "./index.js";
-import {Runtime, Library, Inspector} from "./runtime.js";
-
-
-const displayedCells = ["ageCatPer", "AreaChartAge", "viewof legendeChart"];
-const main = new Runtime().module(notebook, name => {
-  if (displayedCells.includes(name)) {
-    return new Inspector(container);
-  } else return true; // this ensures that all notebook cells are run, even if they aren't displayed
-})
+      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+      import notebook from "https://api.observablehq.com/@mmznrstat/altersverteilung-der-positiv-getesteten-im-kanton-zurich.js?v=3";
+      const renders = {"ageCatPer": "#ageCatPer", "viewof AreaChartAge":"#viewofAreaChartAge", "viewof legendeChart":"#viewoflegendeChart"};
+      for (let i in renders)
+        renders[i] = document.querySelector(renders[i]);
+      const main = new Runtime().module(notebook, (name) => {
+        if (renders[name])
+          return new Inspector(renders[name]);
+        else return true;
+      });
 
 </script>
+<style>
+/* required styles */
+* { font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+select {
+  font-size: 14px;
+}
+
+</style>
