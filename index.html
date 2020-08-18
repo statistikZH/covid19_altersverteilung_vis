@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Altersverteilung der positiv Getesteten im Kanton Zürich</title>
+<link rel="stylesheet" type="text/css" href="./inspector.css">
+<body>
+<script type="module">
+
+import define from "./index.js";
+import {Runtime, Library, Inspector} from "./runtime.js";
+
+
+const displayedCells = ["ageCatPer", "AreaChartAge", "viewof legendeChart"];
+const main = new Runtime().module(notebook, name => {
+  if (displayedCells.includes(name)) {
+    return new Inspector(container);
+  } else return true; // this ensures that all notebook cells are run, even if they aren't displayed
+})
+
+</script>

@@ -1,0 +1,14 @@
+{
+  "name": "@mmznrstat/altersverteilung-der-positiv-getesteten-im-kanton-zurich",
+  "main": "a8b4008e3f68ad25@3116.js",
+  "version": "3116.0.0",
+  "homepage": "https://observablehq.com/@mmznrstat/altersverteilung-der-positiv-getesteten-im-kanton-zurich",
+  "author": {
+    "name": "Matthias Mazenauer",
+    "url": "https://observablehq.com/@mmznrstat"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
