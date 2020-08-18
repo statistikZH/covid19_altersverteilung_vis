@@ -1,8 +1,8 @@
 {
-  "name": "@mmznrstat/altersverteilung-der-positiv-getesteten-im-kanton-zurich",
-  "main": "a8b4008e3f68ad25@3116.js",
-  "version": "3116.0.0",
-  "homepage": "https://observablehq.com/@mmznrstat/altersverteilung-der-positiv-getesteten-im-kanton-zurich",
+  "name": "@mmznrstat/tagliche-covid-19-fallzahlen-im-kanton-zurich",
+  "main": "4e02a689f8b18026@1779.js",
+  "version": "1779.0.0",
+  "homepage": "https://observablehq.com/@mmznrstat/tagliche-covid-19-fallzahlen-im-kanton-zurich",
   "author": {
     "name": "Matthias Mazenauer",
     "url": "https://observablehq.com/@mmznrstat"
